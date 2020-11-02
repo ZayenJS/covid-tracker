@@ -1,0 +1,9 @@
+@import '../../assets/scss/variables';
+
+.Nav {
+  @include flex(center, center, row nowrap);
+
+  &__Item {
+    margin: 0 1rem;
+  }
+}

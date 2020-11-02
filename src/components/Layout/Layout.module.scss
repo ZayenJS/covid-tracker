@@ -1,0 +1,10 @@
+.Layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: fit-content(15rem) auto fit-content(10rem);
+  grid-template-areas: 'header' 'main' 'footer';
+
+  main {
+    grid-area: main;
+  }
+}

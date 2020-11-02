@@ -1,0 +1,41 @@
+@import '../../../assets/scss/variables';
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    // transform: translate(0, -2rem);
+  }
+  to {
+    opacity: 1;
+    // transform: translate(0, 0);
+  }
+}
+
+.CountryNews {
+  animation: fadeIn 500ms ease-in-out forwards 1;
+
+  @include lg {
+    width: 45%;
+    margin: $gutter / 2;
+  }
+
+  &__Title {
+    font-size: 1.5em;
+  }
+
+  &__Image {
+    display: block;
+    min-width: 20rem;
+    width: 100%;
+    margin: ($gutter / 2) 0;
+  }
+
+  &__Content {
+    line-height: 1.4;
+  }
+
+  &__Source {
+    color: adjust-color($color: #61a7ec, $lightness: -10%);
+    text-decoration: underline;
+  }
+}

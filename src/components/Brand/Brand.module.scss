@@ -1,0 +1,28 @@
+@import '../../assets/scss/variables';
+
+.Brand {
+  @include flex(center, center, row nowrap);
+
+  img {
+    width: 5rem;
+  }
+
+  &__Name {
+    @include flex(center, center, row nowrap);
+
+    &:hover {
+      text-decoration: none !important;
+    }
+
+    &:visited {
+      color: #fff !important;
+    }
+
+    h1 {
+      margin-left: 1rem;
+      font-size: 2em;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+}

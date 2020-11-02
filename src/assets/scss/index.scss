@@ -1,0 +1,103 @@
+@import './reset.scss';
+@import './variables.scss';
+
+:root {
+  font-family: 'Nunito sans', sans-serif;
+  background: url('../images/bg-texture.png');
+  background-color: $main-color;
+  color: white;
+}
+
+html ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+}
+html ::-webkit-scrollbar-track {
+  background: lighten($color: $main-color, $amount: 10);
+  border-radius: 0px;
+}
+html ::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 5px;
+  background: $main-color;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+html ::-webkit-scrollbar-thumb:window-inactive {
+  background: darken($color: $main-color, $amount: 30);
+}
+html ::-webkit-scrollbar-thumb:hover {
+  background: lighten($color: $main-color, $amount: 30);
+}
+
+* {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: $main-color lighten($color: $main-color, $amount: 30);
+}
+
+a {
+  color: #fff;
+  font-weight: bold;
+  transition: all 100ms ease-in-out;
+
+  &:hover {
+    color: #61a7ec !important;
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: #aaa;
+  }
+}
+
+.cases {
+  @include flex(center, center, column nowrap);
+  margin: 1rem;
+  min-width: 10rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  background-color: transparentize($color: lighten($color: $warning, $amount: 40), $amount: 0.25);
+  color: darken($color: $warning, $amount: 20);
+  line-height: 1.4;
+
+  span:nth-child(1) {
+    background: transparentize($color: $warning, $amount: 0.25);
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+.recovered {
+  @extend .cases;
+  background-color: transparentize($color: lighten($color: $success, $amount: 40), $amount: 0.25);
+  color: darken($color: $success, $amount: 20);
+
+  span:nth-child(1) {
+    background: transparentize($color: $success, $amount: 0.25);
+  }
+}
+
+.deaths {
+  @extend .cases;
+  background-color: transparentize($color: lighten($color: $danger, $amount: 40), $amount: 0.25);
+  color: darken($color: $danger, $amount: 10);
+
+  span:nth-child(1) {
+    background: transparentize($color: $danger, $amount: 0.25);
+  }
+}
+
+.title {
+  font-size: 1.5em;
+  width: 100%;
+  text-align: center;
+}
+
+.number {
+  font-size: 2em;
+}
+
+.add {
+  font-size: 1.2em;
+}

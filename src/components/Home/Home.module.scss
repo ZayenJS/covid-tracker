@@ -1,0 +1,24 @@
+@import '../../assets/scss/variables';
+
+.Home {
+  padding: $gutter / 2;
+  @include flex(center, center, column nowrap);
+
+  &__CountryInfos {
+    @include flex(flex-end, center, row wrap);
+    margin: 1rem 0;
+    padding: 1rem 0;
+    position: relative;
+
+    section:nth-child(1) {
+      @include lg {
+        width: 50%;
+      }
+
+      h2 {
+        padding: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}

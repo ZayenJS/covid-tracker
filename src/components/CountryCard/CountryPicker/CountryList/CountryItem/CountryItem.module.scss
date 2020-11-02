@@ -1,0 +1,12 @@
+.CountryItem {
+  cursor: pointer;
+  padding: 0.2rem;
+
+  &:hover {
+    background-color: #aaa;
+  }
+
+  span {
+    margin-right: 0.5rem;
+  }
+}

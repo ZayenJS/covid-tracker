@@ -1,0 +1,32 @@
+@import '../../assets/scss/variables';
+
+.Pagination {
+  &__Item {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: $gutter / 4;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 250ms ease-in-out;
+    background: #000;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &__Active {
+      @extend .Pagination__Item;
+      background-color: #123456;
+    }
+
+    &__Disabled {
+      @extend .Pagination__Item;
+      cursor: not-allowed;
+      background-color: #444;
+
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+}

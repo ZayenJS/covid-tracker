@@ -1,0 +1,11 @@
+@import '../../../assets/scss/variables';
+
+.SelectedCountryInfos {
+  font-size: 0.8rem;
+  width: fit-content;
+  margin: auto;
+
+  &__Details {
+    @include flex(center, center, row wrap);
+  }
+}

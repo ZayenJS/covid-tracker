@@ -1,0 +1,24 @@
+.TopTableHeader {
+  &__Row {
+    opacity: 1;
+  }
+
+  &__Cell {
+    padding: 0.5rem;
+    border: 1px solid #fff;
+
+    &__Highlighted {
+      color: #0176eb;
+    }
+  }
+
+  &__Cell:not(:first-child) {
+    padding: 0.5rem;
+    border: 1px solid #fff;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #494949be;
+    }
+  }
+}

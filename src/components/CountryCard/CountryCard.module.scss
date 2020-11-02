@@ -1,0 +1,14 @@
+@import '../../assets/scss/variables';
+
+.CountryCard {
+  @include flex(center, flex-end, row wrap);
+  border: 2px solid $main-color;
+  border-radius: 5px;
+  margin: 0 1rem;
+  padding: 1rem;
+
+  &__CountryPicker__Container {
+    @include flex(center, center, column nowrap);
+    width: 100%;
+  }
+}

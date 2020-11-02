@@ -1,0 +1,9 @@
+@import '../../assets/scss/variables';
+
+.News {
+  width: 100%;
+
+  &__List {
+    @include flex(stretch, center, row wrap);
+  }
+}

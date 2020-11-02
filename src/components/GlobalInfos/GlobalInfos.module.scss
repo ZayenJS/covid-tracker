@@ -1,0 +1,48 @@
+@import '../../assets/scss/variables';
+
+.GlobalInfos {
+  @include flex(center, center, column nowrap);
+  width: 100%;
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: $gutter 0;
+  }
+
+  &__Infos {
+    @include flex(center, space-between, column nowrap);
+    font-size: 1em;
+    width: 100%;
+
+    p {
+      margin: $gutter 0;
+    }
+
+    &__CardContainer {
+      @include flex(center, space-between, column nowrap);
+      width: 100%;
+
+      @include sm {
+        flex-flow: row wrap;
+      }
+
+      section {
+        @include flex(center, center, column nowrap);
+        width: 50%;
+      }
+    }
+
+    &__Cards {
+      @include flex(center, center, row wrap);
+      width: 100%;
+
+      div {
+        max-width: 15rem;
+        width: 100%;
+      }
+    }
+  }
+}

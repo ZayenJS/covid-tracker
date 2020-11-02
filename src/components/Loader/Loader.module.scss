@@ -1,0 +1,11 @@
+.Loader {
+  position: fixed;
+  top: 50%;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  height: fit-content;
+  width: fit-content;
+}
