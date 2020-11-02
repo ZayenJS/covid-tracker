@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+
 import Loader from 'react-loader-spinner';
 
 interface CardProps {
